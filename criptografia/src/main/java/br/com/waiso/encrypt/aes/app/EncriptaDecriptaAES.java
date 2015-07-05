@@ -5,7 +5,8 @@ import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.Cipher;
 
 public class EncriptaDecriptaAES {
-	static final String IV = "AAAAAAAAAAAAAAAA";
+	
+	String IV = "AAAAAAAAAAAAAAAA";
 
 	public byte[] encrypt(String textopuro, String chaveencriptacao) throws Exception {
 		Cipher encripta = Cipher.getInstance("AES/CBC/PKCS5Padding", "SunJCE");

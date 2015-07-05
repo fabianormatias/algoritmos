@@ -5,6 +5,6 @@
     <artifactId>utils</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>br.com.waiso.utils.algoritmos</groupId>
-  <artifactId>algoritmos</artifactId>
+  <groupId>br.com.waiso.utils.criptografia</groupId>
+  <artifactId>criptografia</artifactId>
 </project>
