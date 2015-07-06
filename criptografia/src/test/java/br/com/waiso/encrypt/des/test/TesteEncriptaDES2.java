@@ -6,7 +6,7 @@ import org.junit.Test;
 import br.com.waiso.encrypt.des.app.EncriptaDecriptaDES2;
 import br.com.waiso.encrypt.des.app.EncriptaDecriptaException;
 
-public class TesteEncripta2 {
+public class TesteEncriptaDES2 {
 
 	@Test
 	public void test()  {

@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import br.com.waiso.encrypt.aes.app.EncriptaDecriptaAES;
 
-public class TesteEncripta {
+public class TesteEncriptaAES {
 
 	@Test
 	public void test()  {
@@ -32,7 +32,7 @@ public class TesteEncripta {
 			palavraDescriptografada = encriptar.decrypt(textoencriptado, chaveencriptacao);
 			System.out.println("Palavra Descriptografada: " + palavraDescriptografada);
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println("Erro na incriptação: " + e.getMessage());
 		}
 		
 		Assert.assertEquals(palavra, palavraDescriptografada);

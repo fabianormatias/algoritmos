@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import br.com.waiso.encrypt.des.app.EncriptaDecriptaDES;
 
-public class TesteEncripta {
+public class TesteEncriptaDES {
 
 	@Test
 	public void test()  {
