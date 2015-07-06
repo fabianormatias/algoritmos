@@ -15,10 +15,6 @@ public class TimeUtils {
 	}
 	
 	public Long time() {
-//		Calendar data = Calendar.getInstance();
-//		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-//		String dataFormatada = sdf.format(data.getTime()); 
-//		System.out.println("Data: " + dataFormatada);
 		return System.nanoTime();
 	}
 	
