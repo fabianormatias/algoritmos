@@ -22,7 +22,7 @@ public class TesteEncriptaAES2 {
 				System.out.print(new Integer(textoencriptado[i]) + " ");
 			}
 		} catch (Exception e) {
-			System.out.println("Erro: " + e.getMessage());
+			System.out.println("Erro na incriptação: " + e.getMessage());
 		}
 
 		//Descriptografar

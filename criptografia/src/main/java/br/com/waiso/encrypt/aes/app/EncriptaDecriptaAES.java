@@ -8,7 +8,8 @@ public class EncriptaDecriptaAES {
 	
 	private String IV = "AAAAAAAAAAAAAAAA";
 	private String chaveencriptacao = "0123456789abcdef";
-
+	
+	//TODO Fazer uma validação para retornar o erro quando a chaveencriptacao não tem 16 caracteres
 	public byte[] encrypt(String textopuro, String chaveencriptacao) throws Exception {
 		Cipher encripta = Cipher.getInstance("AES/CBC/PKCS5Padding", "SunJCE");
 		SecretKeySpec key = new SecretKeySpec(chaveencriptacao.getBytes("UTF-8"), "AES");

@@ -4,7 +4,7 @@ import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 /**
- * Adicionei a Exception do encriptador para forçar o usuário a tratar a mensagem de erro (checked exception)
+ *
  * @author fabianomatias
  *
  */
