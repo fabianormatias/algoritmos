@@ -22,7 +22,7 @@ public class TimeUtils {
 		return timeFinal - timeInicio;
 	}
 	
-	public Long timeConvert(Long timeCalculado) {
+	public Long timeResultado(Long timeCalculado) {
 		return TimeUnit.NANOSECONDS.convert(timeCalculado, TimeUnit.NANOSECONDS);
 	}
 
