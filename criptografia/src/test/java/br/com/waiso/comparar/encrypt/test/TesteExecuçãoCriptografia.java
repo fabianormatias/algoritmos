@@ -12,6 +12,7 @@ import br.com.waiso.encrypt.base64.app.EncriptaDecriptaBase64;
 import br.com.waiso.encrypt.des.app.EncriptaDecriptaDES;
 import br.com.waiso.encrypt.otp.app.EncriptaDecriptaOTP;
 import br.com.waiso.encrypt.rc4.app.EncriptaDecriptaRC4;
+import br.com.waiso.encrypt.sha512.app.EncriptaDecriptaSHA512;
 import br.com.waiso.utils.TimeUtils;
 
 public class TesteExecuçãoCriptografia {
@@ -81,6 +82,16 @@ public class TesteExecuçãoCriptografia {
 		System.out.println("Resultado Base64: " + TimeUtils.getInstance().timeResultado(tempoTotalBase64) + " nanosegundos");
 		agruparResultados.add(tempoTotalBase64);
 		
+		//Sha512
+		Long tempoInicialSha512 = TimeUtils.getInstance().time();
+		for (String senha : senhas) {
+			testeDes(senha);
+		}
+		Long tempoFinalSha512 = TimeUtils.getInstance().time();
+		Long tempoTotalSha512 = TimeUtils.getInstance().timeCalculado(tempoInicialSha512, tempoFinalSha512);
+		System.out.println("Resultado Sha512: " + TimeUtils.getInstance().timeResultado(tempoTotalSha512) + " nanosegundos");
+		agruparResultados.add(tempoTotalSha512);
+		
 		System.out.println("\nMelhor resultado: " + Collections.min(agruparResultados) + " nanosegundos");
 		System.out.println("\nPior resultado: " + Collections.max(agruparResultados) + " nanosegundos");
 		
@@ -148,6 +159,16 @@ public class TesteExecuçãoCriptografia {
 		
 		//Descriptografar
 		base64.desencriptarBase64(palavraEncriptada);
+	}
+	
+	public void testeSHA512(String senha) {
+		EncriptaDecriptaSHA512 sha512 = new EncriptaDecriptaSHA512();
+		
+		//Criptografar
+		String palavraEncriptada = sha512.encriptarSHA512(senha);
+		
+		//Descriptografar
+		sha512.encriptarSHA512(palavraEncriptada);
 	}
 
 }

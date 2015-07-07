@@ -16,5 +16,9 @@ public class UUIDUtils {
 	public String generateUUID() {
 		return UUID.randomUUID().getLeastSignificantBits() + "";
 	}
+	
+	public static void main(String[] args) {
+		System.out.println(UUIDUtils.getInstance().generateUUID());
+	}
 
 }
