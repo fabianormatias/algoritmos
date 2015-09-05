@@ -8,6 +8,7 @@
 	<modules>
 		<module>algoritmos</module>
 		<module>criptografia</module>
+		<module>enums</module>
 	</modules>
 	<dependencies>
 		<dependency>
