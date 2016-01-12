@@ -13,25 +13,48 @@ public class EncriptaDecriptaBase64 {
 	public EncriptaDecriptaBase64(){
 	}
 	
-	public byte[] encriptarBase64(String textoPuro) {
-		return Base64.encodeBase64(textoPuro.getBytes());
+//	public byte[] encriptarBase64(String textoPuro) {
+//		return Base64.encodeBase64(textoPuro.getBytes());
+//	}
+//	
+//	public byte[] desencriptarBase64(byte[] codigo) {
+//		return Base64.decodeBase64(codigo);
+//	}
+	
+	public String encriptarBase64(String textoPuro) {
+		return new String(Base64.encodeBase64(textoPuro.getBytes()));
 	}
 	
-	public byte[] desencriptarBase64(byte[] codigo) {
-		return Base64.decodeBase64(codigo);
+	public String desencriptarBase64(String codigo) {
+		byte[] key = codigo.getBytes();
+		return new String(Base64.decodeBase64(key));
 	}
 	
 	public static void main(String[] args) {
 		
 		String textoPuro = "Fabiano Rodrigues";
 		
+//		//Criptografar
+//		byte[] palavraEncriptada = EncriptaDecriptaBase64.getInstance().encriptarBase64(textoPuro);
+//		System.out.println("Palavra criptografada: " + new String(palavraEncriptada));
+//		
+//		//Descriptografar
+//		byte[] palavraDescriptada = EncriptaDecriptaBase64.getInstance().desencriptarBase64(palavraEncriptada);
+//		System.out.println("Palavra criptografada: " + new String(palavraDescriptada));
+		
 		//Criptografar
-		byte[] palavraEncriptada = EncriptaDecriptaBase64.getInstance().encriptarBase64(textoPuro);
-		System.out.println("Palavra criptografada: " + new String(palavraEncriptada));
+		String palavraEncriptada = EncriptaDecriptaBase64.getInstance().encriptarBase64(textoPuro);
+		System.out.println("Palavra criptografada: " + palavraEncriptada);
 		
 		//Descriptografar
-		byte[] palavraDescriptada = EncriptaDecriptaBase64.getInstance().desencriptarBase64(palavraEncriptada);
-		System.out.println("Palavra criptografada: " + new String(palavraDescriptada));
+		String palavraDescriptada = EncriptaDecriptaBase64.getInstance().desencriptarBase64(palavraEncriptada);
+		System.out.println("Palavra criptografada: " + palavraDescriptada);
+		
+		if (textoPuro.equals(palavraDescriptada)) {
+			System.out.println("Iguais");
+		} else {
+			System.out.println("Diferentes");
+		}
 		
 	}
 

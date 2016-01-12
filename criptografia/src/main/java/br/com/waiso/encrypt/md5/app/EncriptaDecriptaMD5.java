@@ -23,18 +23,18 @@ public class EncriptaDecriptaMD5 {
 		return DigestUtils.md5(codigo);
 	}
 	
-	public static void main(String[] args) {
-		
-		String textoPuro = "Fabiano Rodrigues";
-		
-		//Criptografar
-		byte[] palavraEncriptada = EncriptaDecriptaBase64.getInstance().encriptarBase64(textoPuro);
-		System.out.println("Palavra criptografada: " + new String(palavraEncriptada));
-		
-		//Descriptografar
-		byte[] palavraDescriptada = EncriptaDecriptaBase64.getInstance().desencriptarBase64(palavraEncriptada);
-		System.out.println("Palavra criptografada: " + new String(palavraDescriptada));
-		
-	}
+//	public static void main(String[] args) {
+//		
+//		String textoPuro = "Fabiano Rodrigues";
+//		
+//		//Criptografar
+//		String palavraEncriptada = EncriptaDecriptaBase64.getInstance().encriptarBase64(textoPuro);
+//		System.out.println("Palavra criptografada: " + new String(palavraEncriptada));
+//		
+//		//Descriptografar
+//		byte[] palavraDescriptada = EncriptaDecriptaBase64.getInstance().desencriptarBase64(palavraEncriptada);
+//		System.out.println("Palavra criptografada: " + new String(palavraDescriptada));
+//		
+//	}
 
 }

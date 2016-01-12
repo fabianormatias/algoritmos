@@ -10,6 +10,9 @@
 		<module>criptografia</module>
 		<module>enums</module>
 		<module>filas</module>
+		<module>datas</module>
+		<module>emails</module>
+		<module>maratona-java</module>
 	</modules>
 	<dependencies>
 		<dependency>

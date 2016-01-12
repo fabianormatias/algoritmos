@@ -155,7 +155,7 @@ public class TesteExecuçãoCriptografia {
 		EncriptaDecriptaBase64 base64 = new EncriptaDecriptaBase64();
 		
 		//Criptografar
-		byte[] palavraEncriptada = base64.encriptarBase64(senha);
+		String palavraEncriptada = base64.encriptarBase64(senha);
 		
 		//Descriptografar
 		base64.desencriptarBase64(palavraEncriptada);
